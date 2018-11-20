@@ -23,11 +23,34 @@
       </li>
       
     </ul>
-    <div class="dropdown">
-        <span><img class="rounded-circle" height="50px" width="50px" src="http://digitalspyuk.cdnds.net/17/25/320x320/square-1498216547-avatar-neytiri.jpg">
-        </span>
-  </div>
-  <div class="dropdown_content">
-    <p>hello  bitch</p>
+        <div class="dropdown">
+        <img class="rounded-circle" height="50px" width="50px" src="http://digitalspyuk.cdnds.net/17/25/320x320/square-1498216547-avatar-neytiri.jpg">
+
+      
+      
+      <div class="dropdown-content">
+        <% unless user_signed_in? %>
+      <span>
+      <li class="nav-item">
+        <%= link_to "Log in", new_user_session_path, class: "nav-link" %>
+      </li>
+      </span>
+      <span>
+      <li class="nav-item">
+        <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+      </li>
+      </span>
+      <% else %>
+      <span>
+      <li class="nav-item">
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+      </li>
+    </span>
+      <% end %>
+      <li class="nav-item">
+        <%= link_to "New task", new_task_path, class: "nav-link" %>
+      </li>
+      </div>
+      </div>
   </div>
 </nav>
