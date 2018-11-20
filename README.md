@@ -23,3 +23,7 @@ https://pacific-inlet-67589.herokuapp.com/
 Noms | Pseudo Slack
 ------------ | -------------
 ASSANI Samuel | @sassani :tiger:
+
+### PS
+Sa ne fonctione pas sur héroku
+d'ailleurs rien ne fonctionne vraiment :sad:
